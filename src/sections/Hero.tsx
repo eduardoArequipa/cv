@@ -28,13 +28,13 @@ const Hero = () => {
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <div className="flex items-center justify-center gap-6 px-8 py-4 bg-slate-800 rounded-xl border border-slate-700">
-              <a href="https://www.facebook.com/profile.php?id=61585269801188" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61585269801188" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer transition-colors" />
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <WhatsAppIcon className="w-6 h-6 text-gray-400 hover:text-green-500 cursor-pointer transition-colors" />
               </a>
-              <a href="mailto:jorgearecruz@gmail.com">
+              <a href="mailto:jorgearecruz@gmail.com" aria-label="Email">
                 <Mail className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
               </a>
             </div>

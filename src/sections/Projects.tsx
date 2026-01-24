@@ -1,7 +1,15 @@
 import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ title, category, description, image, tags }: any) => (
+interface Project {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
+const ProjectCard = ({ title, category, description, image, tags }: Project) => (
   <motion.div 
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -34,39 +42,56 @@ const ProjectCard = ({ title, category, description, image, tags }: any) => (
 
       <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
         <button className="flex items-center gap-2 text-white text-sm font-semibold hover:text-blue-400 transition-colors">
-          <ExternalLink className="w-4 h-4" /> Demo
+          <ExternalLink className="w-4 h-4" /> Ver Detalles
         </button>
-        {/* Opcional: Solo si el código es público */}
-        {/* <button className="flex items-center gap-2 text-white text-sm font-semibold hover:text-blue-400 transition-colors">
-          <Github className="w-4 h-4" /> Código
-        </button> */}
       </div>
     </div>
   </motion.div>
 );
 
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
-      title: "Sistema POS Farmacia",
-      category: "Sistema de Escritorio / Web",
-      description: "Sistema completo de punto de venta con control de lotes, fecha de vencimiento y facturación electrónica integrada.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800",
+      title: "Sistema POS Farmacéutico",
+      category: "Punto de Venta",
+      description: "Gestión integral de farmacias con control de lotes, alertas de vencimiento, manejo de psicotrópicos y facturación electrónica integrada.",
+      image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=800",
       tags: ["React", "Node.js", "PostgreSQL", "Electron"]
     },
     {
-      title: "Gestión de Inventarios Bodega",
-      category: "Aplicación Web",
-      description: "Plataforma para el control de stock en tiempo real, múltiples almacenes y generación de reportes automáticos.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
-      tags: ["Python", "Django", "React", "Docker"]
+      title: "Facturación Electrónica",
+      category: "Fintech / ERP",
+      description: "Módulo de facturación en línea con firma digital, validación XML en tiempo real y conexión directa con impuestos nacionales.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800",
+      tags: ["Python", "FastAPI", "XML Sign", "Redis"]
     },
     {
-      title: "E-commerce Autopartes",
-      category: "Tienda Online",
-      description: "Tienda virtual con catálogo filtrable por modelo de vehículo, pasarela de pagos y panel administrativo.",
-      image: "https://images.unsplash.com/photo-1556740758-90de2742e1e2?auto=format&fit=crop&q=80&w=800",
-      tags: ["Next.js", "Tailwind", "Stripe"]
+      title: "App de Taxis & Transporte",
+      category: "Movilidad Urbana",
+      description: "Plataforma tipo Uber con apps para conductor y pasajero, geolocalización en tiempo real y cálculo de tarifas dinámicas.",
+      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
+      tags: ["Flutter", "Firebase", "Google Maps API", "NestJS"]
+    },
+    {
+      title: "ERP Comercial Integral",
+      category: "Gestión Empresarial",
+      description: "Sistema administrativo completo: Compras, Ventas, Inventarios multialmacén, Cuentas por Cobrar/Pagar y Reportes BI.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      tags: ["React", "C# .NET", "SQL Server", "Docker"]
+    },
+    {
+      title: "Sistema de Reservas",
+      category: "SaaS / Agenda",
+      description: "Gestión de citas y calendarios para clínicas y servicios. Recordatorios automáticos por WhatsApp y pagos online.",
+      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800",
+      tags: ["Next.js", "Supabase", "Tailwind", "Twilio"]
+    },
+    {
+      title: "App de Pedidos & Delivery",
+      category: "E-commerce",
+      description: "Solución para restaurantes con menú digital, carrito de compras, seguimiento de repartidores y panel de cocina.",
+      image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&q=80&w=800",
+      tags: ["React Native", "Express", "MongoDB", "Socket.io"]
     }
   ];
 
@@ -76,7 +101,7 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Proyectos Destacados</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-4">Algunas de las soluciones que he desarrollado.</p>
+          <p className="text-gray-400 mt-4">Soluciones tecnológicas desarrolladas a medida para diferentes industrias.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (

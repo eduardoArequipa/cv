@@ -51,11 +51,16 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square bg-linear-to-br from-blue-600/20 to-cyan-500/20 rounded-3xl border border-slate-700 flex items-center justify-center overflow-hidden group">
-               <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-               <User className="w-40 h-40 text-blue-500/40 group-hover:scale-110 transition-transform duration-500" />
-               <div className="absolute bottom-6 left-6 right-6 p-6 bg-slate-900/90 backdrop-blur-sm border border-slate-800 rounded-2xl">
-                 <p className="text-blue-400 font-bold">"La ingeniería es el arte de hacer realidad lo imposible."</p>
+            <div className="aspect-square bg-slate-800 rounded-3xl border border-slate-700 overflow-hidden group relative">
+               <img 
+                src="/foto-perfil.png" 
+                alt="Jorge Eduardo Arequipa Cruz"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               />
+               <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors duration-500"></div>
+               
+               <div className="absolute bottom-6 left-6 right-6 p-6 bg-slate-900/90 backdrop-blur-sm border border-slate-800 rounded-2xl shadow-xl">
+                 <p className="text-blue-400 font-bold italic">"La ingeniería es el arte de hacer realidad lo imposible."</p>
                </div>
             </div>
           </motion.div>
