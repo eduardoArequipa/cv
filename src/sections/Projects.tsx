@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface Project {
@@ -39,12 +38,6 @@ const ProjectCard = ({ title, category, description, image, tags }: Project) => 
           </span>
         ))}
       </div>
-
-      <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-        <button className="flex items-center gap-2 text-white text-sm font-semibold hover:text-blue-400 transition-colors">
-          <ExternalLink className="w-4 h-4" /> Ver Detalles
-        </button>
-      </div>
     </div>
   </motion.div>
 );
@@ -70,14 +63,14 @@ const Projects = () => {
       category: "Movilidad Urbana",
       description: "Plataforma tipo Uber con apps para conductor y pasajero, geolocalización en tiempo real y cálculo de tarifas dinámicas.",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
-      tags: ["Flutter", "Firebase", "Google Maps API", "NestJS"]
+      tags: ["React Native", "Firebase", "Google Maps API", "NestJS"]
     },
     {
       title: "ERP Comercial Integral",
       category: "Gestión Empresarial",
       description: "Sistema administrativo completo: Compras, Ventas, Inventarios multialmacén, Cuentas por Cobrar/Pagar y Reportes BI.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      tags: ["React", "C# .NET", "SQL Server", "Docker"]
+      tags: ["React", "C# .NET", "PostgreSql", "Docker"]
     },
     {
       title: "Sistema de Reservas",
