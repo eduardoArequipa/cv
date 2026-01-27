@@ -1,12 +1,5 @@
 import { motion } from 'framer-motion';
-
-interface Project {
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  tags: string[];
-}
+import { projects, type Project } from '../data/projects';
 
 const ProjectCard = ({ title, category, description, image, tags }: Project) => (
   <motion.div 
@@ -19,6 +12,7 @@ const ProjectCard = ({ title, category, description, image, tags }: Project) => 
       <img 
         src={image} 
         alt={title} 
+        loading="lazy"
         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
@@ -43,51 +37,6 @@ const ProjectCard = ({ title, category, description, image, tags }: Project) => 
 );
 
 const Projects = () => {
-  const projects: Project[] = [
-    {
-      title: "Sistema POS Farmacéutico",
-      category: "Punto de Venta",
-      description: "Gestión integral de farmacias con control de lotes, alertas de vencimiento, manejo de psicotrópicos y facturación electrónica integrada.",
-      image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=800",
-      tags: ["React", "Node.js", "PostgreSQL", "Electron"]
-    },
-    {
-      title: "Facturación Electrónica",
-      category: "Fintech / ERP",
-      description: "Módulo de facturación en línea con firma digital, validación XML en tiempo real y conexión directa con impuestos nacionales.",
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800",
-      tags: ["Python", "FastAPI", "XML Sign", "Redis"]
-    },
-    {
-      title: "App de Taxis & Transporte",
-      category: "Movilidad Urbana",
-      description: "Plataforma tipo Uber con apps para conductor y pasajero, geolocalización en tiempo real y cálculo de tarifas dinámicas.",
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
-      tags: ["React Native", "Firebase", "Google Maps API", "NestJS"]
-    },
-    {
-      title: "ERP Comercial Integral",
-      category: "Gestión Empresarial",
-      description: "Sistema administrativo completo: Compras, Ventas, Inventarios multialmacén, Cuentas por Cobrar/Pagar y Reportes BI.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      tags: ["React", "C# .NET", "PostgreSql", "Docker"]
-    },
-    {
-      title: "Sistema de Reservas",
-      category: "SaaS / Agenda",
-      description: "Gestión de citas y calendarios para clínicas y servicios. Recordatorios automáticos por WhatsApp y pagos online.",
-      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800",
-      tags: ["Next.js", "Supabase", "Tailwind", "Twilio"]
-    },
-    {
-      title: "App de Pedidos & Delivery",
-      category: "E-commerce",
-      description: "Solución para restaurantes con menú digital, carrito de compras, seguimiento de repartidores y panel de cocina.",
-      image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&q=80&w=800",
-      tags: ["React Native", "Express", "MongoDB", "Socket.io"]
-    }
-  ];
-
   return (
     <section id="proyectos" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
