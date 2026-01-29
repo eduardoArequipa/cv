@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronRight, Facebook, Mail } from 'lucide-react';
+import { ChevronRight, Facebook, Mail, FileDown } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const Hero = () => {
@@ -27,7 +27,15 @@ const Hero = () => {
               Ver Servicios
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <div className="flex items-center justify-center gap-6 px-8 py-4 bg-slate-800 rounded-xl border border-slate-700">
+            <a 
+              href="/CV_Jorge_Arequipa.pdf" 
+              download
+              className="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-semibold border border-slate-700 transition-all"
+            >
+              <FileDown className="w-5 h-5 text-blue-400" />
+              Descargar CV
+            </a>
+            <div className="flex items-center justify-center gap-6 px-8 py-4 bg-slate-900/50 rounded-xl border border-slate-800 backdrop-blur-sm">
               <a href="https://www.facebook.com/profile.php?id=61585269801188" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer transition-colors" />
               </a>

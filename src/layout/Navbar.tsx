@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Terminal, Menu, X } from 'lucide-react';
+import { Terminal, Menu, X, FileDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <a 
+              href="/CV_Jorge_Arequipa.pdf" 
+              download 
+              className="flex items-center gap-2 text-gray-300 hover:text-white border border-slate-700 hover:border-blue-500 px-4 py-2 rounded-lg text-sm font-medium transition-all"
+            >
+              <FileDown className="w-4 h-4" />
+              CV
+            </a>
             <a href="#contacto" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-lg shadow-blue-500/20">
               Cotizar Proyecto
             </a>
@@ -77,11 +85,19 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 pb-2">
+            <div className="pt-4 pb-2 flex flex-col gap-3 px-4">
+              <a 
+                href="/CV_Jorge_Arequipa.pdf" 
+                download
+                className="flex items-center justify-center gap-2 border border-slate-700 text-gray-300 px-4 py-3 rounded-lg text-base font-medium"
+              >
+                <FileDown className="w-5 h-5" />
+                Descargar CV
+              </a>
               <a 
                 href="#contacto" 
                 onClick={() => setIsOpen(false)}
-                className="bg-blue-600 text-white block px-4 py-3 rounded-lg text-base font-medium mx-4"
+                className="bg-blue-600 text-white block px-4 py-3 rounded-lg text-base font-medium"
               >
                 Cotizar Proyecto
               </a>
