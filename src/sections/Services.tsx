@@ -26,12 +26,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 px-4 bg-slate-900/50">
+    <section id="servicios" className="py-20 px-4 bg-slate-100/50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Soluciones Informáticas</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Soluciones Informáticas</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
             Especializado en crear herramientas que impulsan el crecimiento y la organización de tu negocio.
           </p>
         </div>

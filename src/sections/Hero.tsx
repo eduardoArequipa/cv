@@ -15,35 +15,35 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-blue-500 font-semibold tracking-wide uppercase text-sm mb-3">Ingeniero en Informática</h2>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
-            Construyo Soluciones <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">Escalables</span>
+          <h2 className="text-blue-600 dark:text-blue-500 font-semibold tracking-wide uppercase text-sm mb-3">Ingeniero en Informática</h2>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+            Construyo Soluciones <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Escalables</span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+          <p className="text-slate-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
             Especializado en el desarrollo de <b>sistemas de ventas, control de inventarios</b> y soluciones de software a medida para optimizar tu negocio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#servicios" className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all group">
+            <a href="#servicios" className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all group shadow-lg shadow-blue-500/25">
               Ver Servicios
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
               href="/CV_Jorge_Arequipa.pdf" 
               download
-              className="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-semibold border border-slate-700 transition-all"
+              className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-slate-200 dark:border-slate-700 transition-all shadow-sm"
             >
-              <FileDown className="w-5 h-5 text-blue-400" />
+              <FileDown className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               Descargar CV
             </a>
-            <div className="flex items-center justify-center gap-6 px-8 py-4 bg-slate-900/50 rounded-xl border border-slate-800 backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-6 px-8 py-4 bg-white/50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 backdrop-blur-sm shadow-sm">
               <a href="https://www.facebook.com/profile.php?id=61585269801188" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Facebook className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer transition-colors" />
+                <Facebook className="w-6 h-6 text-slate-400 hover:text-blue-600 dark:hover:text-blue-500 cursor-pointer transition-colors" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <WhatsAppIcon className="w-6 h-6 text-gray-400 hover:text-green-500 cursor-pointer transition-colors" />
+                <WhatsAppIcon className="w-6 h-6 text-slate-400 hover:text-green-600 dark:hover:text-green-500 cursor-pointer transition-colors" />
               </a>
               <a href="mailto:jorgearecruz@gmail.com" aria-label="Email">
-                <Mail className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                <Mail className="w-6 h-6 text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer transition-colors" />
               </a>
             </div>
           </div>

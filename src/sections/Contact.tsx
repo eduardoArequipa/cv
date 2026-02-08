@@ -7,19 +7,19 @@ const Contact = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${whatsappMessage}`;
 
   return (
-    <section id="contacto" className="py-20 px-4 bg-blue-600/5">
+    <section id="contacto" className="py-20 px-4 bg-blue-600/5 dark:bg-blue-600/5">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-white mb-6">¿Tienes un proyecto en mente?</h2>
-        <p className="text-gray-400 mb-10 text-lg">
+        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">¿Tienes un proyecto en mente?</h2>
+        <p className="text-slate-600 dark:text-gray-400 mb-10 text-lg">
           Estoy disponible para nuevos proyectos y colaboraciones. Hablemos sobre cómo puedo ayudarte a materializar tu idea.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
             href="mailto:jorgearecruz@gmail.com" 
-            className="flex items-center gap-3 bg-white text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all w-full sm:w-auto justify-center"
+            className="flex items-center gap-3 bg-white dark:bg-white text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all w-full sm:w-auto justify-center shadow-md border border-slate-200"
           >
-            <Mail className="w-5 h-5" />
+            <Mail className="w-5 h-5 text-blue-600" />
             Enviar Correo
           </a>
           
