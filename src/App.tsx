@@ -2,6 +2,7 @@ import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
+import Achievements from './sections/Achievements';
 import Projects from './sections/Projects';
 import Services from './sections/Services';
 import Technologies from './sections/Technologies';
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Achievements />
         <Services />
         <Projects />
         <Technologies />

@@ -3,39 +3,25 @@ import { Terminal, Menu, X, FileDown, Sun, Moon } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
-
-  // Inicializar el tema desde localStorage o preferencia del sistema
-  useEffect(() => {
+  const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
+    return savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark((prev) => {
-      const newVal = !prev;
-      if (newVal) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      return newVal;
-    });
+    setIsDark((prev) => !prev);
   };
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
     { name: 'Sobre Mí', href: '#sobre-mí' },
+    { name: 'Logros', href: '#logros' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Proyectos', href: '#proyectos' },
     { name: 'Tecnologías', href: '#tecnologías' },

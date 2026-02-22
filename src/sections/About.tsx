@@ -53,7 +53,7 @@ const About = () => {
           >
             <div className="aspect-square bg-slate-100 dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 overflow-hidden group relative shadow-xl">
                <img 
-                src="/foto-perfil.png" 
+                src="/foto-perfil.webp" 
                 alt="Jorge Eduardo Arequipa Cruz"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                />
