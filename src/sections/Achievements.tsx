@@ -40,6 +40,9 @@ const AchievementCard = ({ image, title, caption }: AchievementPhoto) => {
             src={image}
             alt={title}
             loading="lazy"
+            decoding="async"
+            width={1200}
+            height={900}
             onError={() => setImageError(true)}
             className="w-full h-full object-cover"
           />

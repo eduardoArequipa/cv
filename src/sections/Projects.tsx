@@ -13,6 +13,9 @@ const ProjectCard = ({ title, category, description, image, tags }: Project) => 
         src={image} 
         alt={title} 
         loading="lazy"
+        decoding="async"
+        width={800}
+        height={450}
         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
@@ -46,8 +49,8 @@ const Projects = () => {
           <p className="text-slate-600 dark:text-gray-400 mt-4">Soluciones tecnológicas desarrolladas a medida para diferentes industrias.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
       </div>

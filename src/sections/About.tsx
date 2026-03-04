@@ -55,6 +55,10 @@ const About = () => {
                <img 
                 src="/foto-perfil.webp" 
                 alt="Jorge Eduardo Arequipa Cruz"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={800}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                />
                <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-transparent transition-colors duration-500"></div>

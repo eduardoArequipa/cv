@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Menú Móvil Desplegable */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 animate-menu-in">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
             {navLinks.map((item) => (
               <a

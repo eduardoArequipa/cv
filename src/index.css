@@ -11,3 +11,18 @@
     @apply transition-colors duration-300;
   }
 }
+
+@keyframes menu-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-in {
+  animation: menu-slide-down 200ms ease-out;
+}

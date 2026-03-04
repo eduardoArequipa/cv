@@ -11,6 +11,7 @@ const FloatingWhatsApp = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Abrir chat de WhatsApp"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
