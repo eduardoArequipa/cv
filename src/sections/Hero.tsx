@@ -22,18 +22,26 @@ const Hero = () => {
           <p className="text-slate-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
             Especializado en el desarrollo de <b>sistemas de ventas, control de inventarios</b> y soluciones de software a medida para optimizar tu negocio.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
             <a href="#servicios" className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all group shadow-lg shadow-blue-500/25">
               Ver Servicios
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a 
-              href="/CV_Jorge_Arequipa.pdf" 
+            <a
+              href="/CV_Fullstack_Tecnico_Jorge_Arequipa.pdf"
+              download
+              className="flex items-center justify-center gap-2 bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 px-8 py-4 rounded-xl font-semibold transition-all shadow-sm"
+            >
+              <FileDown className="w-5 h-5 text-blue-400 dark:text-blue-600" />
+              Descargar CV Tecnico
+            </a>
+            <a
+              href="/CV_Desarrollador_Jorge_Arequipa.pdf"
               download
               className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-slate-200 dark:border-slate-700 transition-all shadow-sm"
             >
               <FileDown className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              Descargar CV
+              Ver CV Desarrollador
             </a>
             <div className="flex items-center justify-center gap-6 px-8 py-4 bg-white/50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 backdrop-blur-sm shadow-sm">
               <a href="https://www.facebook.com/profile.php?id=61585269801188" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
