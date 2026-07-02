@@ -3,7 +3,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 
 const FloatingWhatsApp = () => {
   const whatsappNumber = "59172973548";
-  const whatsappMessage = encodeURIComponent("Hola Jorge, vi tu portafolio y me interesa cotizar un sistema.");
+  const whatsappMessage = encodeURIComponent("Hola Jorge, vi tu portafolio y me interesa conversar contigo.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
