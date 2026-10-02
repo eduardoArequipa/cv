@@ -2,11 +2,31 @@ export interface Project {
   title: string;
   category: string;
   description: string;
-  image: string;
+  image?: string;
   tags: string[];
+  featured?: boolean;
+  documentationUrl?: string;
+  repositoryUrl?: string;
+  siteUrl?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "Semantic Validator",
+    category: "Open source / Validación semántica",
+    description: "Validación del significado de nombres, direcciones y descripciones de productos. API REST en Go y SDKs para TypeScript, Python, Go y Java, con integración a Jev mediante una clave propia.",
+    tags: ["Go", "REST API", "TypeScript", "Python", "Java"],
+    featured: true,
+    documentationUrl: "https://validator.trialsur.cloud/docs/byok.html",
+    repositoryUrl: "https://github.com/eduardoArequipa/semantic-validator"
+  },
+  {
+    title: "Dharma · Gestión Textil",
+    category: "Proyecto empresarial / Santa Cruz",
+    description: "Sistema desarrollado para una empresa textil de Santa Cruz, Bolivia. Gestiona órdenes de producción y costura e integra la operación textil con los módulos de inventario, clientes y compras de Odoo.",
+    tags: ["Angular", "TypeScript", "PrimeNG", "Tailwind CSS", "Odoo"],
+    siteUrl: "https://dharma.trialsur.cloud/"
+  },
   {
     title: "Sistema POS Farmacéutico",
     category: "Punto de Venta",
